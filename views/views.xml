@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="testaddon.list">
+      <field name="name">testaddon list</field>
+      <field name="model">testaddon.testaddon</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="testaddon.action_window">
+      <field name="name">testaddon window</field>
+      <field name="res_model">testaddon.testaddon</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="testaddon.action_server">
+      <field name="name">testaddon server</field>
+      <field name="model_id" ref="model_testaddon_testaddon"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="testaddon" id="testaddon.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="testaddon.menu_1" parent="testaddon.menu_root"/>
+    <menuitem name="Menu 2" id="testaddon.menu_2" parent="testaddon.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="testaddon.menu_1_list" parent="testaddon.menu_1"
+              action="testaddon.action_window"/>
+    <menuitem name="Server to list" id="testaddon" parent="testaddon.menu_2"
+              action="testaddon.action_server"/>
+    -->
+  </data>
+</odoo>
